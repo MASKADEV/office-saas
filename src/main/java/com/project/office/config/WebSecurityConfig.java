@@ -1,5 +1,5 @@
 package com.project.office.config;
-import com.project.office.UserService;
+import com.project.office.service.UserService;
 import com.project.office.util.jwt.JwtAuthenticationEntryPoint;
 import com.project.office.util.jwt.JwtRequestFilter;
 import org.springframework.beans.factory.annotation.Autowired;
