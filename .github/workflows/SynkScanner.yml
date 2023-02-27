@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - name: give user permmision
+        run: chmod +x mvnw
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
         env:
