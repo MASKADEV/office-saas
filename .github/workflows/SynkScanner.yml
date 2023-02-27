@@ -1,22 +1,13 @@
-name: CI
-
-on:
-  push:
-    branches:
-      - main
-
+name: Snyk Scanner
+on: push
 jobs:
-  build:
+  security:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Build and test Spring Boot app
-        run: |
-          ./mvnw clean install
-      - name: Scan dependencies with Synk
-        uses: synopsys/synk-action@v2
-        with:
-          file: synk.json
+      - uses: actions/checkout@master
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/node@master
         env:
-          SYNK_TOKEN: ${{ secrets.SYNK_TOKEN }}
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: monitor
