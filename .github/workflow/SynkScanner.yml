@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build and test Spring Boot app
+        run: |
+          ./mvnw clean install
+      - name: Scan dependencies with Synk
+        uses: synopsys/synk-action@v2
+        with:
+          file: synk.json
+        env:
+          SYNK_TOKEN: ${{ secrets.SYNK_TOKEN }}
