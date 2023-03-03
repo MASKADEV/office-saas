@@ -9,10 +9,10 @@ import com.project.office.util.authority.CustomGrantedAuthority;
 import com.project.office.util.jwt.JwtTokenUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.core.userdetails.User.UserBuilder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -28,11 +28,11 @@ public class UserService implements UserDetailsService {
     private UserRepository userRepository;
     @Autowired
     private PasswordEncoder passwordEncoder;
-
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
+    @Autowired
+    private RedisTemplate template;
     private int size;
-
     public void saveUser(RegistrationRequest registrationRequest) {
         try {
         User user = new User();
@@ -42,6 +42,7 @@ public class UserService implements UserDetailsService {
             user.setEmail(registrationRequest.getEmail());
             user.setRoles(Collections.singleton(Role.USER));
         userRepository.save(user);
+        template.opsForHash().put("User", user.getId(), user);
         }catch(Exception e){
             log.info(e.getMessage());
         }
@@ -57,7 +58,11 @@ public class UserService implements UserDetailsService {
         return "";
     }
     public List<User> getusers(){
-        return userRepository.findAll();
+        List<User> users = null;
+        userRepository.findAll().stream().map(user -> {
+            return users.add(user);
+        });
+        return users;
     }
 
     @Override
