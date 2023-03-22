@@ -1,7 +1,7 @@
 package com.project.office.service;
 
 import com.project.office.dto.request.RegistrationRequest;
-import com.project.office.dto.request.Role;
+import com.project.office.dto.enumuration.Role;
 import com.project.office.dto.request.Signin;
 import com.project.office.entity.User;
 import com.project.office.repository.UserRepository;
@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.core.userdetails.User.UserBuilder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
 package com.project.office.entity;
 
-import com.project.office.dto.request.Role;
+import com.project.office.dto.enumuration.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -33,4 +33,7 @@ public class User {
     @CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
+
+    @ManyToMany(mappedBy = "members")
+    private Set<Team> teams;
 }

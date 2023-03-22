@@ -1,4 +1,4 @@
-package com.project.office.dto.request;
+package com.project.office.dto.enumuration;
 
 public enum Role {
     MANAGER,
