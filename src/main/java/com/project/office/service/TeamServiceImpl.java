@@ -17,12 +17,13 @@ public class TeamServiceImpl implements TeamService{
 
     @Override
     public Team createTeam(Team team) {
-        return null;
+        Team results = teamRepoository.save(team);
+        return results;
     }
 
     @Override
     public Team findById(Long id) {
-        return null;
+        return teamRepoository.findById(id).orElse(null);
     }
 
     @Override
@@ -32,7 +33,8 @@ public class TeamServiceImpl implements TeamService{
 
     @Override
     public Team updateTeam(Long id, Team team) {
-        return null;
+        Team team_found = teamRepoository.save(team);
+        return team_found;
     }
 
     @Override
