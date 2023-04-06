@@ -4,8 +4,6 @@ import com.project.office.entity.Service;
 import com.project.office.entity.Team;
 import com.project.office.repository.ServiceRepository;
 import com.project.office.repository.TeamRepoository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.parameters.P;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,10 +11,14 @@ import java.util.List;
 @org.springframework.stereotype.Service
 public class ServiceSerImpl implements ServiceSer{
 
-    @Autowired
-    private ServiceRepository serRepository;
-    @Autowired
-    private TeamRepoository teamRepoository;
+    private final ServiceRepository serRepository;
+    private final TeamRepoository teamRepoository;
+
+    public ServiceSerImpl(ServiceRepository serRepository, TeamRepoository teamRepoository) {
+        this.serRepository = serRepository;
+        this.teamRepoository = teamRepoository;
+    }
+
     @Override
     public Service createService(Long team_id,Service ser) {
         Team team = teamRepoository.findById(team_id).orElse(null);
