@@ -18,12 +18,13 @@ import java.util.Map;
 @RestController
 @Slf4j
 @RequestMapping("/auth")
-public class AuthenticationResource {
+public class AuthController {
     @Autowired
     private UserService userService;
 
     @PostMapping("/register")
     public ResponseEntity<?> registerUser( @Valid @RequestBody RegistrationRequest registrationRequest) {
+        log.info("here");
         if (userService.existsByUsername(registrationRequest.getUsername())) {
             return ResponseEntity.badRequest().body(new MessageResponse("Error: Username is already taken!"));
         }
@@ -31,7 +32,7 @@ public class AuthenticationResource {
         return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
     }
 
-    @PostMapping("/signing")
+    @PostMapping("/signin")
     public ResponseEntity<ResponseModal> signing(@Valid @RequestBody Signin signin){
         String results = userService.signin(signin);
         if(!results.isEmpty()){

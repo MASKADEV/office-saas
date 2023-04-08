@@ -1,64 +1,390 @@
-<section>
-  <main class="relative h-screen overflow-hidden bg-white dark:bg-gray-800">
-    <header class="z-30 flex items-center w-full h-24 sm:h-32">
-      <div class="container flex items-center justify-between px-6 mx-auto">
-        <div class="text-3xl font-black text-gray-800 uppercase dark:text-white">
-          <svg aria-hidden="true" focusable="false" width="100" height="100" viewBox="0 0 512 309">
-            <path d="M120.81 80.561h96.568v7.676h-87.716v57.767h82.486v7.675h-82.486v63.423h88.722v7.675H120.81V80.561zm105.22 0h10.26l45.467 63.423L328.23 80.56L391.441 0l-103.85 150.65l53.515 74.127h-10.663l-48.686-67.462l-48.888 67.462h-10.461l53.917-74.128l-50.296-70.088zm118.898 7.676V80.56h110.048v7.676h-50.699v136.54h-8.852V88.237h-50.497zM0 80.56h11.065l152.58 228.323l-63.053-84.107L9.254 91.468l-.402 133.31H0V80.56zm454.084 134.224c-1.809 0-3.165-1.4-3.165-3.212c0-1.81 1.356-3.212 3.165-3.212c1.83 0 3.165 1.401 3.165 3.212c0 1.811-1.335 3.212-3.165 3.212zm8.698-8.45h4.737c.064 2.565 1.937 4.29 4.693 4.29c3.079 0 4.823-1.854 4.823-5.325v-21.99h4.823v22.011c0 6.252-3.617 9.853-9.603 9.853c-5.62 0-9.473-3.493-9.473-8.84zm25.384-.28h4.78c.409 2.953 3.294 4.828 7.45 4.828c3.875 0 6.717-2.005 6.717-4.764c0-2.371-1.809-3.794-5.921-4.764l-4.005-.97c-5.62-1.316-8.181-4.032-8.181-8.602c0-5.54 4.521-9.227 11.303-9.227c6.308 0 10.916 3.686 11.196 8.925h-4.694c-.452-2.867-2.95-4.657-6.567-4.657c-3.81 0-6.35 1.833-6.35 4.635c0 2.22 1.635 3.493 5.683 4.441l3.423.841c6.373 1.488 9 4.075 9 8.753c0 5.95-4.607 9.68-11.97 9.68c-6.89 0-11.52-3.558-11.864-9.12z" fill="#000">
-            </path>
-          </svg>
-        </div>
+<div>
+
+  <!-- Section: Design Block -->
+  <section class="mb-40">
+    <nav class="navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-full justify-between">
+      <div class="px-6 w-full flex flex-wrap items-center justify-between">
         <div class="flex items-center">
-          <nav class="items-center hidden text-lg text-gray-800 uppercase font-sen dark:text-white lg:flex">
-            <a href="#" class="flex px-6 py-2 text-indigo-500 border-b-2 border-indigo-500">
-              Home
-            </a>
-            <a href="#" class="flex px-6 py-2 hover:text-indigo-500">
-              Watch
-            </a>
-            <a href="#" class="flex px-6 py-2 hover:text-indigo-500">
-              Services
-            </a>
-            <a href="#" class="flex px-6 py-2 hover:text-indigo-500">
-              Contact
-            </a>
-            <a href="#" class="flex px-6 py-2 hover:text-indigo-500">
-              Get Started
-            </a>
-          </nav>
-          <button class="flex flex-col ml-4 lg:hidden">
-                    <span class="w-6 h-1 mb-1 bg-gray-800 dark:bg-white">
-                    </span>
-            <span class="w-6 h-1 mb-1 bg-gray-800 dark:bg-white">
-                    </span>
-            <span class="w-6 h-1 mb-1 bg-gray-800 dark:bg-white">
-                    </span>
-          </button>
+          <a class="navbar-brand text-blue-600 font-bold" >
+            My Office
+          </a>
+        </div>
+        <div class="navbar-collapse collapse grow items-center" id="navbarSupportedContentY">
+          <ul class="navbar-nav mr-auto lg:flex lg:flex-row">
+            <li class="nav-item">
+              <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Team</a>
+            </li>
+            <li class="nav-item mb-2 lg:mb-0">
+              <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Projects</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex items-center lg:ml-auto">
+          <button routerLink="/signin" type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light">Get Started</button>
         </div>
       </div>
-    </header>
-    <div class="relative z-20 flex items-center bg-white dark:bg-gray-800">
-      <div class="container relative flex flex-col items-center justify-between px-6 py-8 mx-auto">
-        <div class="flex flex-col">
-          <h1 class="w-full text-4xl font-light text-center text-gray-800 uppercase sm:text-5xl dark:text-white">
-            Your partner for Production
-          </h1>
-          <h2 class="w-full max-w-2xl py-8 mx-auto text-xl font-light text-center text-gray-500 dark:text-white">
-            Next.js gives you the best developer experience with all the features you need for production: hybrid static &amp; server rendering, TypeScript support, smart bundling, route pre-fetching, and more. No config needed.
-          </h2>
-          <div class="flex items-center justify-center mt-4">
-            <a href="#" class="px-4 py-2 mr-4 text-white uppercase bg-gray-800 border-2 border-transparent text-md hover:bg-gray-900">
-              Get started
-            </a>
-            <a href="#" class="px-4 py-2 text-gray-800 uppercase bg-transparent border-2 border-gray-800 dark:text-white hover:bg-gray-800 hover:text-white text-md">
-              Our Services
-            </a>
+    </nav>
+
+    <div class="px-6 py-12 md:px-12 text-gray-800 text-center lg:text-left">
+      <div class="container mx-auto xl:px-32">
+        <div class="grid lg:grid-cols-2 flex items-center">
+          <div class="md:mt-12 lg:mt-0 mb-12 lg:mb-0">
+            <div class="block rounded-lg shadow-lg px-6 py-12 md:px-12 lg:-mr-14" style="background: hsla(0, 0%, 100%, 0.55); backdrop-filter: blur(30px);">
+              <h1 class="text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-12">The best offer <br /><span class="text-blue-600">for your business</span></h1>
+              <a class="inline-block px-7 py-3 mb-2 md:mb-0 md:mr-2 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="#!" role="button">Get started</a>
+              <a class="inline-block px-7 py-3 bg-transparent text-blue-600 font-medium text-sm leading-snug uppercase rounded hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="#!" role="button">Learn more</a>
+            </div>
           </div>
-        </div>
-        <div class="relative block w-full mx-auto mt-6 md:mt-0">
-          <img src="/images/object/12.svg" class="max-w-xs m-auto md:max-w-2xl"/>
+          <div class="md:mb-12 lg:mb-0">
+            <img
+              src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg"
+              class="w-full rounded-lg shadow-lg"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </div>
-  </main>
-</section>
+  </section>
+  <!-- Section: Design Block -->
+
+  <!-- Container for Pricing -->
+  <div class="container my-24 px-6 mx-auto">
+    <section class="mb-32 text-gray-800">
+      <h2 class="text-3xl font-bold text-center mb-12">Pricing</h2>
+
+      <div class="grid lg:grid-cols-3 gap-6 lg:gap-x-12">
+        <div class="mb-6 lg:mb-0">
+          <div class="block rounded-lg shadow-lg bg-white h-full">
+            <div class="p-6 border-b border-gray-300 text-center">
+              <p class="uppercase mb-4 text-sm">
+                <strong>Basic</strong>
+              </p>
+              <h3 class="text-2xl mb-6">
+                <strong>$ 129</strong>
+                <small class="text-gray-500 text-sm">/year</small>
+              </h3>
+
+              <button type="button"
+                      class="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out w-full"
+                      style="background-color: hsl(0, 0%, 95%)" data-mdb-ripple="true" data-mdb-ripple="true"
+                      data-ripple-color="primary">
+                Buy
+              </button>
+            </div>
+            <div class="p-6">
+              <ol class="list-inside">
+                <li class="mb-4 flex items-center">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                       class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                    </path>
+                  </svg>Unlimited updates
+                </li>
+                <li class="mb-4 flex items-center">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                       class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                    </path>
+                  </svg>Git repository
+                </li>
+                <li class="mb-4 flex items-center">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                       class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                    </path>
+                  </svg>npm installation
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-6 lg:mb-0">
+          <div class="block rounded-lg shadow-lg bg-white h-full">
+            <div class="p-6 border-b border-gray-300 text-center">
+              <p class="uppercase mb-4 text-sm">
+                <strong>Advanced</strong>
+              </p>
+              <h3 class="text-2xl mb-6">
+                <strong>$ 299</strong>
+                <small class="text-gray-500 text-sm">/year</small>
+              </h3>
+              <button type="button"
+                      class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
+                      data-mdb-ripple="true" data-ripple-color="light">
+                Buy
+              </button>
+            </div>
+            <div class="p-6">
+              <ol class="list-inside">
+                <li class="mb-4 flex items-center">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                       class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                    </path>
+                  </svg>Unlimited updates
+                </li>
+                <li class="mb-4 flex items-center">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                       class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                    </path>
+                  </svg>Git repository
+                </li>
+                <li class="mb-4 flex items-center">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                       class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                    </path>
+                  </svg>npm installation
+                </li>
+                <li class="mb-4 flex items-center">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                       class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                    </path>
+                  </svg>Code examples
+                </li>
+                <li class="mb-4 flex items-center">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                       class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                    </path>
+                  </svg>Premium snippets
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-6 lg:mb-0">
+          <div class="block rounded-lg shadow-lg bg-white h-full">
+            <div class="p-6 border-b border-gray-300 text-center">
+              <p class="uppercase mb-4 text-sm">
+                <strong>Enterprise</strong>
+              </p>
+              <h3 class="text-2xl mb-6">
+                <strong>$ 499</strong>
+                <small class="text-gray-500 text-sm">/year</small>
+              </h3>
+              <button type="button"
+                      class="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out w-full"
+                      style="background-color: hsl(0, 0%, 95%)" data-mdb-ripple="true" data-mdb-ripple="true"
+                      data-ripple-color="primary">
+                Buy
+              </button>
+            </div>
+            <div class="p-6">
+              <ol class="list-inside">
+                <li class="mb-4 flex items-center">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                       class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                    </path>
+                  </svg>Unlimited updates
+                </li>
+                <li class="mb-4 flex items-center">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                       class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                    </path>
+                  </svg>Git repository
+                </li>
+                <li class="mb-4 flex items-center">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                       class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                    </path>
+                  </svg>npm installation
+                </li>
+                <li class="mb-4 flex items-center">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                       class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                    </path>
+                  </svg>Code examples
+                </li>
+                <li class="mb-4 flex items-center">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                       class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                    </path>
+                  </svg>Premium snippets
+                </li>
+                <li class="mb-4 flex items-center">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                       class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                    </path>
+                  </svg>Premium support
+                </li>
+                <li class="mb-4 flex items-center">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                       class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                    </path>
+                  </svg>Drag&amp;Drop builder
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Container for Pricing -->
+
+  <!-- Container for State -->
+  <div class="container my-24 px-6 mx-auto">
+    <section class="mb-32 text-gray-800 text-center lg:text-left">
+      <div class="block rounded-lg shadow-lg bg-white">
+        <div class="flex flex-wrap items-center">
+          <div class="block w-full lg:flex grow-0 shrink-0 basis-auto lg:w-6/12 xl:w-4/12">
+            <img
+              src="https://mdbootstrap.com/img/new/ecommerce/vertical/086.jpg"
+              alt="Trendy Pants and Shoes"
+              class="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
+            />
+          </div>
+          <div class="grow-0 shrink-0 basis-auto w-full lg:w-6/12 xl:w-8/12">
+            <div class="px-6 py-12 md:px-12">
+              <h2 class="text-3xl font-bold mb-4 text-blue-600 display-5">Why is it so great?</h2>
+              <p class="text-gray-500 mb-12">
+                Nunc tincidunt vulputate elit. Mauris varius purus malesuada neque iaculis
+                malesuada. Aenean gravida magna orci, non efficitur est porta id. Donec magna
+                diam.
+              </p>
+
+              <div class="grid lg:gap-x-12 md:grid-cols-3">
+                <div class="mb-12 md:mb-0">
+                  <h2 class="text-3xl font-bold text-blue-600 mb-4">1000</h2>
+                  <h5 class="text-lg font-medium text-gray-500 mb-0">Happy customers</h5>
+                </div>
+
+                <div class="mb-12 md:mb-0">
+                  <h2 class="text-3xl font-bold text-blue-600 mb-4">70%</h2>
+                  <h5 class="text-lg font-medium text-gray-500 mb-0">Growth</h5>
+                </div>
+
+                <div class="">
+                  <h2 class="text-3xl font-bold text-blue-600 mb-4">49</h2>
+                  <h5 class="text-lg font-medium text-gray-500 mb-0">Projects</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Container for State -->
+
+  <!-- Container for Contact -->
+  <div class="container my-24 px-6 mx-auto">
+    <section class="mb-32 text-gray-800 text-center">
+      <style>
+        .map-container {
+          height: 700px;
+          z-index: -1;
+        }
+      </style>
+      <div class="px-6 py-12 md:px-12">
+        <div class="container mx-auto xl:px-32">
+          <div class="grid lg:grid-cols-2 flex items-center">
+            <div class="md:mt-12 lg:mt-0 mb-12 lg:mb-0">
+              <div
+                class="block rounded-lg shadow-lg px-6 py-12 md:px-12 lg:-mr-14"
+                style="background: hsla(0, 0%, 100%, 0.55); backdrop-filter: blur(30px)"
+              >
+                <h2 class="text-3xl font-bold mb-12">Contact us</h2>
+                <form>
+                  <div class="form-group mb-6">
+                    <input
+                      type="text"
+                      class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                      id="exampleInput7"
+                      placeholder="Name"
+                    />
+                  </div>
+                  <div class="form-group mb-6">
+                    <input
+                      type="email"
+                      class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                      id="exampleInput8"
+                      placeholder="Email address"
+                    />
+                  </div>
+                  <div class="form-group mb-6">
+                <textarea
+                  class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                  id="exampleFormControlTextarea13"
+                  rows="3"
+                  placeholder="Message"
+                ></textarea>
+                  </div>
+                  <div class="form-group form-check text-center mb-6">
+                    <input
+                      type="checkbox"
+                      class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer"
+                      id="exampleCheck87"
+                      checked
+                    />
+                    <label class="form-check-label inline-block text-gray-800" for="exampleCheck87"
+                    >Send me a copy of this message</label
+                    >
+                  </div>
+                  <button
+                    type="submit"
+                    class="w-full px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                  >
+                    Send
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="md:mb-12 lg:mb-0">
+              <div class="map-container relative shadow-lg rounded-lg">
+                <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" class="left-0 top-0 h-full w-full absolute rounded-lg" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Container for Contact -->
+</div>

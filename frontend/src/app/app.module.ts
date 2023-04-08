@@ -7,6 +7,10 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { SignupComponent } from './components/authentication/signup/signup.component';
 import { SigninComponent } from './components/authentication/signin/signin.component';
 import { HomeComponent } from './components/dashboard/home/home.component';
+import { LayoutComponent } from './components/dashboard/components/layout/layout.component';
+import { FileManagmentComponent } from './components/dashboard/file-managment/file-managment.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -14,12 +18,16 @@ import { HomeComponent } from './components/dashboard/home/home.component';
     LandingPageComponent,
     SignupComponent,
     SigninComponent,
-    HomeComponent
+    HomeComponent,
+    LayoutComponent,
+    FileManagmentComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        HttpClientModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

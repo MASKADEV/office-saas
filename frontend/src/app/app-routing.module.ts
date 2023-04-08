@@ -5,6 +5,7 @@ import {SigninComponent} from "./components/authentication/signin/signin.compone
 import {SignupComponent} from "./components/authentication/signup/signup.component";
 import {HomeComponent} from "./components/dashboard/home/home.component";
 import {AuthGuard} from "./security/auth.guard";
+import {FileManagmentComponent} from "./components/dashboard/file-managment/file-managment.component";
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -17,7 +18,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
-      // { path: 'profile', component: ProfileComponent },
+      { path: 'file-management', component: FileManagmentComponent },
       // { path: 'settings', component: SettingsComponent },
       { path: '**', redirectTo: 'home', pathMatch: 'full' },
     ]
