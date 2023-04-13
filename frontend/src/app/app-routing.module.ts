@@ -3,23 +3,26 @@ import { RouterModule, Routes } from '@angular/router';
 import {LandingPageComponent} from "./components/landing-page/landing-page.component";
 import {SigninComponent} from "./components/authentication/signin/signin.component";
 import {SignupComponent} from "./components/authentication/signup/signup.component";
-import {HomeComponent} from "./components/dashboard/home/home.component";
+import {TeamManagmentComponent} from "./components/dashboard/teamManagment/teamManagment.component";
 import {AuthGuard} from "./security/auth.guard";
-import {FileManagmentComponent} from "./components/dashboard/file-managment/file-managment.component";
+import {DocToPdfComponent} from "./components/dashboard/coverter/doc-to-pdf/doc-to-pdf.component";
 
 const routes: Routes = [
-  { path: '', component: LandingPageComponent },
+  { path: '', component: SignupComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'signin', component: SigninComponent },
   {
     path: 'dashboard',
     canActivate: [AuthGuard],
-    component: HomeComponent,
     children: [
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: 'home', component: HomeComponent },
-      { path: 'file-management', component: FileManagmentComponent },
-      // { path: 'settings', component: SettingsComponent },
+      { path: '', component: LandingPageComponent, pathMatch: 'full' },
+      { path: 'team-management', component: TeamManagmentComponent},
+      { path: 'convert',
+        children:[
+          { path : 'doc-pdf', component: DocToPdfComponent},
+          { path: '**', redirectTo: 'home', pathMatch: 'full' },
+        ]
+      },
       { path: '**', redirectTo: 'home', pathMatch: 'full' },
     ]
   }

@@ -1,1 +1,3 @@
-<router-outlet></router-outlet>
+<app-layout *ngIf="isLogedin()"></app-layout>
+<app-signup *ngIf="!isLogedin() && !checkurl" ></app-signup>
+<app-signin *ngIf="!isLogedin() && checkurl" ></app-signin>

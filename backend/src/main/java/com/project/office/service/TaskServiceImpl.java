@@ -40,7 +40,16 @@ public class TaskServiceImpl implements TaskService{
 
     @Override
     public List<Task> findAllByTeamId(Long teamId) {
-        return null;
+//        Team team = teamRepository.findById(teamId).orElse(null);
+//        if(team != null){
+//            List<Task> tasks =taskRepository.findByTeam(team);
+//            tasks.stream().forEach(task -> {
+//                log.info("hola " + task.getTitle());
+//            });
+//            return tasks;
+//        }else {
+            return null;
+//        }
     }
 
     @Override

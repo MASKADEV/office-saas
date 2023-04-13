@@ -16,10 +16,12 @@ export class LayoutComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if(!this.authServidce.isLoggedIn()){
+      this.router.navigate(['/signin'])
+    }
   }
 
   logout(){
     this.authServidce.logout();
-    this.router.navigate(['/'])
   }
 }

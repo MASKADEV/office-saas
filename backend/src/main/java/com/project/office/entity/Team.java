@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -26,5 +28,5 @@ public class Team {
             joinColumns = @JoinColumn(name="team_id"),
             inverseJoinColumns = @JoinColumn(name="user_id")
     )
-    private Set<User> members;
+    private List<User> members;
 }

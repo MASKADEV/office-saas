@@ -18,4 +18,16 @@ export class AuthGuard implements CanActivate {
       return false;
     }
   }
+  // canDeactivate(
+  //   component: any,
+  //   currentRoute: ActivatedRouteSnapshot,
+  //   currentState: RouterStateSnapshot,
+  //   nextState?: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+  //   if (this.authService.isLoggedIn()) {
+  //     return true;
+  //   } else {
+  //     this.router.navigate(['/signin']);
+  //     return false;
+  //   }
+  // }
 }

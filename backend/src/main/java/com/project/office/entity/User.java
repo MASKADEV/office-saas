@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -35,5 +37,5 @@ public class User {
     private Set<Role> roles;
 
     @ManyToMany(mappedBy = "members")
-    private Set<Team> teams;
+    private List<Team> teams;
 }
